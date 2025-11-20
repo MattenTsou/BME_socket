@@ -38,7 +38,20 @@ pip install pyautogui pyperclip
 Step 0：確認網路與 IP，修改biopac_client.py的IP  
 Step 1：開啟 BIOPAC  
 Step 2：在 Own PC 啟動 eeg_server.py  
-Step 3：在 BIOPAC PC 啟動 biopac_client.py  
+Step 3：在 BIOPAC PC 啟動 biopac_client.py    
+
+---
+
+## 後續擴充（未來工作）
+
+在 eeg_server_1sec.py 中，將 new_lines 轉成 numpy array，實作：  
+ - band-pass filter  
+ - 頻帶能量 / 特徵抽取  
+ - focus / relax / blink 分類模型  
+
+將分類結果送給：  
+ - pynput 鍵盤模擬（控制獨木橋遊戲）  
+ - 或遊戲端的另一個 socket server（傳遞 JSON 指令）
 
 
 
